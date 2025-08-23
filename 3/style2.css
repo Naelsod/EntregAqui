@@ -1,0 +1,179 @@
+:root {
+    --dark-bg: #1C1C1E;
+    --card-bg: #2C2C2E;
+    --text-primary: #FFFFFF;
+    --text-secondary: #8E8E93;
+    --accent-green: #ff0;
+    --border-color: #3A3A3C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.phone-frame {
+    width: 375px;
+    height: 812px;
+    background-color: var(--dark-bg);
+    border-radius: 40px;
+    box-shadow: 0 10px B30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.app-screen {
+    background-color: var(--dark-bg);
+    height: 100%;
+    width: 100%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+.app-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.app-header i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.app-main {
+    flex-grow: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ride-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.route-info {
+    position: relative;
+    padding-left: 35px;
+}
+
+.route-connector {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    bottom: 25px;
+    width: 2px;
+    background-color: var(--border-color);
+    border-left: 2px dotted var(--text-secondary);
+}
+
+.location-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.location-point:last-child {
+    margin-bottom: 0;
+}
+.location-point i {
+    position: absolute;
+    left: 0;
+    font-size: 22px;
+    color: var(--text-primary);
+    background-color: var(--card-bg);
+    padding: 0 5px;
+}
+.location-text label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+.location-text p {
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.ride-summary {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.summary-item {
+    text-align: center;
+    flex: 1;
+}
+.summary-item label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+.summary-item p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.summary-item.earnings p {
+    color: var(--accent-green);
+    font-size: 22px;
+}
+
+.map-container {
+    flex-grow: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-footer {
+    padding: 0 20px 20px 20px;
+    flex-shrink: 0;
+}
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+.btn-decline, .btn-accept {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-decline {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+.btn-accept {
+    background-color: var(--accent-green);
+    color: var(--text-primary);
+    flex-grow: 2; /* Faz o botão de aceitar ser maior */
+}

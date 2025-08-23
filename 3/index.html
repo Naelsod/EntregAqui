@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div>
+        <div class="app-screen">
+            <header class="app-header">
+                <a href="entrega.html"><i class="fa-solid fa-bars"></i></a>
+                <h1>Buscar entregador</h1>
+                <i class="fa-solid fa-user"></i>
+            </header>
+
+            <main class="app-main">
+                <div class="destination-selector">
+                    <h2>Selecione o destino:</h2>
+                    <button class="destination-btn" data-distance="2,2 km" data-price="6,04">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Centro da Cidade</span>
+                    </button>
+                    <button class="destination-btn" data-distance="1,8 km" data-price="6,11">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Pátio Central Shopping</span>
+                    </button>
+                    <button class="destination-btn" data-distance="2,3 km" data-price="6,26">
+                        <i class="fa-solid fa-tree"></i>
+                        <span>Parque do Mocambo</span>
+                    </button>
+                </div>
+                
+                <div id="map-placeholder">
+                    <img src="img/mapa.jpeg" alt="Mapa da cidade 2D">
+                </div>
+
+                <div id="ride-details" class="ride-details-card">
+                    <h3>Total da Corrida (<span id="distance-display"></span>)</h3>
+                    <p id="price-display">R$ --,--</p>
+                </div>
+            </main>
+
+        <footer class="app-footer">
+                <button id="request-ride-btn" class="start-ride-button" style="color:black;">Buscar Entregador</button>
+            </footer>
+
+            <div id="searching-overlay" class="overlay">
+                <div class="pulsing-loader"></div>
+                <p class="searching-text">Buscando o melhor entregador...</p>
+            </div>
+
+        </div> 
+    </div> <script src="script.js"></script>
+
+</body>
+</html>
