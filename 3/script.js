@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.className = 'bottom-sheet';
 
         modal.innerHTML = `
-            <img src="img/gus.jpeg" alt="Foto do Entregador" class="driver-photo">
+            <img src="../img/gus.jpeg" alt="Foto do Entregador" class="driver-photo">
             <h2>Entregador a caminho!</h2>
             <p class="driver-eta">Chega em 3 minutos</p>
             <div class="driver-details">
